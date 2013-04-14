@@ -3,7 +3,6 @@
     <head>
         <title>onScreen jQuery Plugin</title>
         <meta charset="UTF-8">
-        
         <style>
             * { margin: 0px; padding: 0px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
             #boxes-holder { width: 100%; padding: 3%; overflow: hidden; }
@@ -20,18 +19,6 @@
             div:nth-child(even) { -webkit-transform: translate3d(-100px,60px,0); }
             div.onscreen { -webkit-transform: translate3d(0,0,0); opacity: 1; background: red; }
         </style>
-        
-        <script src="js/libs/jquery.min.js" ></script>
-        <script src="js/onscreen.js" ></script>
-        <script>
-            $(document).ready(function(){
-                $('div:onscreen, div:passedscroll').addClass('onscreen');
-                $(window).on('scroll', function(){
-                    $('div:onscreen, div:passedscroll').addClass('onscreen');
-                    $('div:hiddeninbottom').removeClass('onscreen');
-                });
-            });
-        </script>
     </head>
     <body>
         <section id="boxes-holder">
@@ -132,5 +119,16 @@
             <div></div>
             <div></div>
         </section>
+        <script src="js/libs/jquery.min.js" ></script>
+        <script src="js/onscreen.js" ></script>
+        <script>
+            $(document).ready(function(){
+                $('div:onscreen, div:passedscroll').addClass('onscreen');
+                $(window).on('scroll', function(){
+                    $('div:onscreen, div:passedscroll').addClass('onscreen');
+                    $('div:hiddeninbottom').removeClass('onscreen');
+                });
+            });
+        </script>
     </body>
 </html>
