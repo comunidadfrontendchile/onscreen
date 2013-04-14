@@ -23,26 +23,4 @@
             
         return itemOffsetTop > (scrollTop + windowHeight);
     };
-    
-    
-    $(window.document).ready(function(){
-        $('div:onscreen, div:passedscroll').css({
-                'background' : 'red',
-                'opacity': '1',
-                '-webkit-transform': 'translate3d(0,0,0)'
-            });
-        $window.on('scroll', function(){
-            $('div:onscreen, div:passedscroll').css({
-                'background' : 'red',
-                'opacity': '1',
-                '-webkit-transform': 'translate3d(0,0,0)'
-            }); 
-            
-            $('div:hiddeninbottom').css({
-                'background' : 'blue',
-                'opacity': '0.2',
-                '-webkit-transform': 'translate3d(0,50px,0)'
-            });
-        });
-    });
 }(this, jQuery));
