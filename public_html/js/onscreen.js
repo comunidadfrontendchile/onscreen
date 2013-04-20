@@ -8,19 +8,8 @@
     $.expr[':'].onscreen = function( elem ){ // function(elem, index, match)
         var itemOffsetTop = $(elem).offset().top,
             scrollTop = $window.scrollTop();
-            
         return ( itemOffsetTop > scrollTop ) && ( itemOffsetTop < (scrollTop + windowHeight) );
     };
-    $.expr[':'].passedscroll = function( elem ){
-        var itemOffsetTop = $(elem).offset().top,
-            scrollTop = $window.scrollTop();
-            
-        return itemOffsetTop < scrollTop;
-    };
-    $.expr[':'].hiddeninbottom = function( elem ){
-        var itemOffsetTop = $(elem).offset().top,
-            scrollTop = $window.scrollTop();
-            
-        return itemOffsetTop > (scrollTop + windowHeight);
-    };
+    $.expr[':'].passedscroll = function( elem ){ return $(elem).offset().top < $window.scrollTop(); };
+    $.expr[':'].hiddeninbottom = function( elem ){ return $(elem).offset().top > ($window.scrollTop() + windowHeight); };
 }(this, jQuery));
