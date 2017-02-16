@@ -7,7 +7,7 @@ Set de selectores personalizados para detectar la posición de los elementos en 
 
  - jQuery 1.7+
 
-
+----------
 ### Uso ###
 
     // selecciona todos los <div>s actualmente visibles en la pantalla
