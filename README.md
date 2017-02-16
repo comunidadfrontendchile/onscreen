@@ -5,7 +5,7 @@ Set de selectores personalizados para detectar la posición de los elementos en 
 ----------
 ### Dependencias ###
 
- 1. jQuery 1.7+
+ - jQuery 1.7+
 
 
 ### Uso ###
